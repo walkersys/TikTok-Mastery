@@ -1,0 +1,42 @@
+:root {
+  /* Primary colors */
+  --color-primary: 254, 44, 85;
+  --color-secondary: 37, 244, 238;
+  
+  /* Text colors */
+  --color-text-primary: 51, 51, 51;
+  --color-text-secondary: 115, 115, 115;
+  
+  /* Background colors */
+  --color-bg-primary: 255, 255, 255;
+  --color-bg-secondary: 249, 250, 251;
+  
+  /* Border colors */
+  --color-border: 229, 231, 235;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-primary: 0, 0, 0;
+    --color-text-secondary: 0, 0, 0;
+    --color-border: 0, 0, 0;
+  }
+}

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #fe2c55, #25f4ee);
+  z-index: 1000;
+  transition: width 0.2s;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, #fe2c55, #25f4ee);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgba(254, 44, 85, 0.9), rgba(37, 244, 238, 0.9));
+  padding: 160px 0 100px;
+}
+
+.feature-card {
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: none;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  transition: transform 0.3s ease;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #fe2c55, #ff4d4d);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(254, 44, 85, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(254, 44, 85, 0.4);
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #fe2c55, #25f4ee);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border: 3px solid #fe2c55;
+  margin-top: -80px;
+  position: relative;
+  z-index: 2;
+}
